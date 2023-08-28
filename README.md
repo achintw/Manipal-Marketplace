@@ -1,3 +1,3 @@
 # Manipal-marketplace | Django
 
-This is a marketplace website made with html, tailwind-css and django as a final project for the internet tools lab at my university.
+This is a marketplace website made with HTML, CSS and Django as a final project for the internet tools lab at my university.
