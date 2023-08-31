@@ -27,7 +27,7 @@ def new_conversation(request, item_pk):
         form = ConversationMessageForm(request.POST)
 
         if form.is_valid():
-            # create a new conversation
+            # create a new conversation for db
             conversation = Conversation.objects.create(item=item)
 
             # adding (you, item) to the members' list
@@ -36,7 +36,7 @@ def new_conversation(request, item_pk):
             conversation.save()
 
             # the conversation written will be saved
-            conversation_message = form.save(commit=False)
+            conversation_message = form.save(commit=False)   #temp save
             conversation_message.conversation = conversation
             conversation_message.created_by = request.user
             conversation_message.save()
